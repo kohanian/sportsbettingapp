@@ -99,17 +99,14 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/bottomSection"
-            android:paddingRight="20dp"
-            android:paddingLeft="20dp"
-            android:paddingBottom="30dp">
+            android:id="@+id/bottomSection">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp">
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -129,12 +126,59 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Day -2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_DayNeg2"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="Day -1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_DayNeg1"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_Day0"
+                    android:layout_weight="1"
+                    android:text="Day 0" />
+
+                <Button
+                    android:text="Day +1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_DayPos1"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="Day +2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_DayPos2"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:id="@+id/listview_game"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:dividerHeight="10dp"
+                android:divider="#d1d1d1" ></ListView>
 
         </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>
