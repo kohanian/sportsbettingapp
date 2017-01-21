@@ -3,6 +3,7 @@ package com.bridge.hackathon.sportsbettingapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -21,6 +22,10 @@ public class HomeActivity extends AppCompatActivity {
 
         email = (TextView)findViewById(R.id.textView);
         email.setText(userEmail);
+
+        HttpRequestHandler httpRequestHandler = new HttpRequestHandler();
+        String jsonReq = httpRequestHandler.xmlToJson();
+        Log.d("JSON String:::: ",jsonReq);
 
     }
 }
