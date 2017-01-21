@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                                 try {
                                     email = object.getString("email");
                                     Log.d("TAGGGGGGGGGGG",email);
-                                    Intent myIntent = new Intent(LoginActivity.this,HomeActivity.class);
+                                    Intent myIntent = new Intent(LoginActivity.this,GameActivity.class);
                                     myIntent.putExtra("currentUserEmail",email);
                                     startActivity(myIntent);
                                 } catch (JSONException e) {

@@ -23,7 +23,7 @@ public class GameListAdapter extends BaseAdapter {
 
     public GameListAdapter(Context mContext, List<Game> mGame) {
         this.mContext = mContext;
-        this.mGameList = mGameList;
+        this.mGameList = mGame;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class GameListAdapter extends BaseAdapter {
         TextView tvAmount = (TextView)v.findViewById(R.id.tv_amount);
 
         //set Text for TextView
-        tvId.setText(mGameList.get(position).getId());
+        tvId.setText(String.valueOf(mGameList.get(position).getId()));
         tvPlayer1.setText(String.valueOf(mGameList.get(position).getPlayer1() + "'s Team"));
         tvPlayer2.setText(String.valueOf(mGameList.get(position).getPlayer2() + "'s Team"));
         tvAmount.setText(String.valueOf(mGameList.get(position).getAmount()) + " $");

@@ -35,13 +35,13 @@ public class GameActivity extends AppCompatActivity {
         adapter = new GameListAdapter(getApplicationContext(), mGameList);
         lvGame.setAdapter(adapter);
 
-        lvGame.setOnClickListener(new AdapterView.OnItemClickListener() {
+        lvGame.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                 //do sometihng
                 //EX : display message with
-                Toast.makeText()
+                Toast.makeText(getApplicationContext(),"Toast",Toast.LENGTH_LONG);
             }
-        }
+        });
     }
 }
