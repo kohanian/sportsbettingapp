@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Sports Betting App</string>
+    <string name="facebook_app_id">617069998481248</string>
+    <string name="fb_login_protocol_scheme">fbAPP_ID</string>
+    <string name="mongo_username">kohanian89</string>
+    <string name="mongo_password">wWFoMpgtcq9T3rq5</string>
+    <string name="mongo_database">SportsBetting</string>
 </resources>
