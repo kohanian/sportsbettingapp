@@ -10,7 +10,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
@@ -23,7 +22,6 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,8 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".HomeActivity" />
 
@@ -48,8 +45,12 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".GameActivity" />
-
-
+        <activity android:name=".CreateActivity" />
+        <activity android:name=".JoinActivity" />
+        <activity android:name=".BuildTeamActivity" />
+        <activity android:name=".BetActivity" />
+        <activity android:name=".RuleActivity" />
+        <activity android:name=".LiveGameRoomActivity"></activity>
     </application>
 
 </manifest>
