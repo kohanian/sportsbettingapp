@@ -37,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView_Start"
                     android:fontFamily="sans-serif"
-                    android:textColor="#000000"
+                    android:textColor="@android:color/background_dark"
                     android:textSize="40sp" />
 
                 <LinearLayout
@@ -45,14 +45,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="51dp"
                     android:background="#DDDDDD"
-                    android:backgroundTint="#0000000">
+                    android:backgroundTint="@android:color/background_dark">
 
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/plus"
                         android:id="@+id/imageButton_create"
-                        android:background="#0000000"
+                        android:background="@android:color/background_dark"
                         android:layout_weight="1"
                         android:paddingTop="20dp" />
 
@@ -61,7 +61,7 @@
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/enter"
                         android:id="@+id/imageButton_join"
-                        android:background="#0000000"
+                        android:background="@android:color/background_dark"
                         android:minHeight="0dp"
                         android:layout_weight="1"
                         android:paddingTop="20dp" />
@@ -78,7 +78,7 @@
                         android:layout_height="match_parent"
                         android:id="@+id/textView_Create"
                         android:layout_weight="1"
-                        android:textColor="#000000" />
+                        android:textColor="@android:color/background_dark" />
 
                     <TextView
                         android:text="Join a game"
@@ -87,7 +87,7 @@
                         android:id="@+id/textView_Join"
                         android:layout_weight="1"
                         android:textSize="20sp"
-                        android:textColor="#000000" />
+                        android:textColor="@android:color/background_dark" />
                 </LinearLayout>
 
             </LinearLayout>

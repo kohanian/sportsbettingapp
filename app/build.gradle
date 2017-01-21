@@ -29,5 +29,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
     compile 'org.mongodb:mongodb-driver:3.4.1'
     testCompile 'junit:junit:4.12'
+    compile group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
     compile files('libs/java-json.jar')
 }

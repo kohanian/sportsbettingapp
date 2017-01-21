@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import java.util.concurrent.ExecutionException;
+
 public class HomeActivity extends AppCompatActivity {
 
     String userEmail;
@@ -22,10 +24,6 @@ public class HomeActivity extends AppCompatActivity {
 
         email = (TextView)findViewById(R.id.textView);
         email.setText(userEmail);
-
-        HttpRequestHandler httpRequestHandler = new HttpRequestHandler();
-        String jsonReq = httpRequestHandler.xmlToJson();
-        Log.d("JSON String:::: ",jsonReq);
 
     }
 }

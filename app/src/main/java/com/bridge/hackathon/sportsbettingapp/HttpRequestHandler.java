@@ -1,5 +1,17 @@
 package com.bridge.hackathon.sportsbettingapp;
 
+import android.os.AsyncTask;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.util.Log;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.XML;
@@ -10,21 +22,28 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by kyleohanian on 1/21/17.
  */
 
-public class HttpRequestHandler {
+public class HttpRequestHandler extends AsyncTask<String, Void, String> {
     String request;
+    String jsonPrettyPrintString;
 
 
-    public HttpRequestHandler() {
+    private Exception exception;
+
+
+    @Override
+    protected String doInBackground(String... params) {
         HttpURLConnection connection = null;
+
+        String urlFooter = params[0];
 
         try {
             String urlBase = "http://api.sportradar.us";
-            String urlFooter = "/nba-t3/seasontd/2016/REG/rankings.xml?api_key=876nvvkv2s96b9ujt5596mc2";
             URL url = new URL(urlBase + urlFooter);
             System.out.println("URL:: " + urlBase + urlFooter);
 
@@ -45,25 +64,36 @@ public class HttpRequestHandler {
 
         } catch (MalformedURLException e) {
             System.out.println("Malformed URL");
-            e.printStackTrace();
+            this.exception = e;
+            return null;
         } catch (IOException e) {
             System.out.println("IO Exception");
-            e.printStackTrace();
+            this.exception = e;
+            return null;
         }
-    }
-
-    public String xmlToJson() {
         String json = "";
         try {
             JSONObject xmlJSONObj = XML.toJSONObject(request);
-            String jsonPrettyPrintString = xmlJSONObj.toString(4);
+            jsonPrettyPrintString = xmlJSONObj.toString(4);
             System.out.println(jsonPrettyPrintString);
             json = jsonPrettyPrintString;
+            Log.d("JSON String:::: ",json);
+//            return jsonPrettyPrintString;
         } catch (JSONException je) {
-            System.out.println(je.toString());
+            this.exception = je;
+            return null;
         }
-
-        return json;
+        return jsonPrettyPrintString;
     }
 
+
+    String footer = "/nba-t3/teams/583eca2f-fb46-11e1-82cb-f4ce4684ea4c/profile.xml?api_key=876nvvkv2s96b9ujt5596mc2";
+
+//    try {
+//        String output = new HttpRequestHandler().execute(footer).get();
+//    } catch (InterruptedException e) {
+//        e.printStackTrace();
+//    } catch (ExecutionException e) {
+//        e.printStackTrace();
+//    }
 }
