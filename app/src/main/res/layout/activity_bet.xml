@@ -14,9 +14,9 @@
         android:text="$20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button3"
-        android:layout_toEndOf="@+id/button3"
-        android:id="@+id/button4" />
+        android:layout_alignTop="@+id/button3_id"
+        android:layout_toEndOf="@+id/button3_id"
+        android:id="@+id/button4_id" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
         android:inputType="textPersonName"
         android:text="$ 00.00"
         android:ems="10"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/button2_id"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:id="@+id/editText"
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:id="@+id/button5"
+        android:id="@+id/button5_id"
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true" />
 
@@ -43,18 +43,18 @@
         android:text="$10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
+        android:id="@+id/button3_id"
         android:layout_above="@+id/editText"
-        android:layout_alignStart="@+id/button5" />
+        android:layout_alignStart="@+id/button5_id" />
 
     <Button
         android:text="$1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:id="@+id/button2"
+        android:id="@+id/button2_id"
         android:layout_below="@+id/textView3"
-        android:layout_toStartOf="@+id/button3"
+        android:layout_toStartOf="@+id/button3_id"
         android:layout_marginEnd="12dp" />
 
     <TextView
@@ -64,7 +64,7 @@
         android:layout_marginTop="38dp"
         android:id="@+id/textView4"
         android:textSize="30sp"
-        android:layout_below="@+id/button5"
+        android:layout_below="@+id/button5_id"
         android:layout_centerHorizontal="true" />
 
     <TextView
