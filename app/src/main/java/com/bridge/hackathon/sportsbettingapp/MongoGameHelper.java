@@ -19,7 +19,11 @@ public class MongoGameHelper extends MongoHelper {
     }
 
     public void insertGame(String player1, String player2, String state, String winner,
-                           String player1Score, String player2Score) {
+                           String player1Score, String player2Score, Lineup lineup1, Lineup lineup2) {
+        Document document = new Document("player1",player1).append("player2",player2).append("state",
+                state).append("winner",winner).append("player1Score",player1Score).append("player2Score",
+                player2Score).append("lineup1",lineup1).append("lineup2",lineup2);
+        collection.insertOne(document);
 
     }
 

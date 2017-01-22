@@ -27,10 +27,8 @@ public class MongoUserHelper extends MongoHelper {
 
     public void insertUser(String email) {
         BasicDBList games = new BasicDBList();
-        BasicDBList friends = new BasicDBList();
         Document document = new Document("facebookEmail",
-                email).append("games",games).append("friends",
-                friends);
+                email).append("games",games);
         collection.insertOne(document);
     }
 

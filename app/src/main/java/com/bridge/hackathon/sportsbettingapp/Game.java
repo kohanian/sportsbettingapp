@@ -11,10 +11,15 @@ public class Game {
     private String player2;
     private String amount;
 
+
     private String teamName1;
     private String teamName2;
 
     private String date;
+
+    private Lineup lineup1;
+    private Lineup lineup2;
+
 
     //private int record;
 
@@ -25,6 +30,8 @@ public class Game {
         this.player2 = player2;
         this.amount = amount;
         this.date = date;
+        this.lineup1 = null;
+        this.lineup2 = null;
     }
 
     // Setter and getter
@@ -76,5 +83,29 @@ public class Game {
 
     public void setTeamName2(String teamName2) {
         this.teamName2 = teamName2;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public Lineup getLineup1() {
+        return lineup1;
+    }
+
+    public void setLineup1(Lineup lineup1) {
+        this.lineup1 = lineup1;
+    }
+
+    public Lineup getLineup2() {
+        return lineup2;
+    }
+
+    public void setLineup2(Lineup lineup2) {
+        this.lineup2 = lineup2;
     }
 }
