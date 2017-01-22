@@ -1,7 +1,10 @@
 package com.bridge.hackathon.sportsbettingapp;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,14 +15,40 @@ import java.util.Map;
 
 public class FirebaseGame {
 
-    public FirebaseGame(String player1, String player2, String amount) {
+    int childrenCount = 0;
+
+    public FirebaseGame(final String gameID, final String player1, final String player2, final String amount) {
+//        getNumberOfGames(new FirebaseHandler() {
+//            @Override
+//            public void onSuccess(DataSnapshot dataSnapshot) {
+//
+//            }
+//        });
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReferenceFromUrl("https://sportsbetting-14c48.firebaseio.com/");
         DatabaseReference smallRef = myRef.child("games");
-        Game game = new Game("1", player1, player2, amount, "Test");
-        String id = "1";
-        Map<String, Object> listOfGames = new HashMap<String, Object>();
-        listOfGames.put(id,game);
-        smallRef.setValue(listOfGames);
+        DatabaseReference numberRef = smallRef.child(gameID);
+        Game game = new Game(gameID, player1, player2, amount, "Test");
+        numberRef.setValue(game);
     }
+
+    public void getNumberOfGames(final FirebaseHandler callback) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReferenceFromUrl("https://sportsbetting-14c48.firebaseio.com/");
+//        DatabaseReference smallRef = myRef.child("games");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                childrenCount = (int) dataSnapshot.getChildrenCount();
+                System.out.println(childrenCount);
+                callback.onSuccess(dataSnapshot);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
 }

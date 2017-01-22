@@ -12,15 +12,13 @@ import java.util.Map;
 
 public class FirebaseUser {
 
-    public FirebaseUser(String email) {
+    public FirebaseUser(String id, String email) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReferenceFromUrl("https://sportsbetting-14c48.firebaseio.com/");
         DatabaseReference smallRef = myRef.child("users");
+        DatabaseReference numberRef = smallRef.child(id);
         User user = new User(email,"0","0");
-        String id = "1";
-        Map<String,Object> users = new HashMap<String, Object>();
-        users.put(id,user);
-        smallRef.setValue(users);
+        numberRef.setValue(user);
 
     }
 }

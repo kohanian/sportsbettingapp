@@ -36,9 +36,10 @@ public class GameActivity extends AppCompatActivity {
         userEmail = currentIntent.getStringExtra("currentUserEmail");
 
 
-        FirebaseUser firebaseUser = new FirebaseUser(userEmail);
+        FirebaseUser firebaseUser = new FirebaseUser("1",userEmail);
+        FirebaseUser firebaseUser2 = new FirebaseUser("2","gupta298@purdue.edu");
 
-        FirebaseGame firebaseGame = new FirebaseGame("1","2","10");
+        FirebaseGame firebaseGame = new FirebaseGame("1","1","2","10");
 
 
         // button to next page (create game)
@@ -77,25 +78,6 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
-        final Button button4 = (Button) findViewById(R.id.button4_id);
-        final Button button3 = (Button) findViewById(R.id.button3_id);
-        final Button button2 = (Button) findViewById(R.id.button2_id);
-        final EditText editText = (EditText)findViewById(R.id.editText);
-        button4.setOnClickListener(new View.OnClickListener() {
-            public void onClick (View v) {
-                editText.setText("$20.00");
-            }
-        });
-        button3.setOnClickListener(new View.OnClickListener() {
-            public void onClick (View v) {
-                editText.setText("$10.00");
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener() {
-            public void onClick (View v) {
-                editText.setText("$1.00");
-            }
-        });
 //        lvGame.setOnClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
 //            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
@@ -105,14 +87,14 @@ public class GameActivity extends AppCompatActivity {
 //            }
 //        }
 
-        String footer = "/nba-t3/games/d470c0a2-c2fa-450e-9b65-70328a4b7efa/summary.xml?api_key=876nvvkv2s96b9ujt5596mc2";
-        try {
-            String output = new HttpRequestHandler().execute(footer).get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
+//        String footer = "/nba-t3/games/d470c0a2-c2fa-450e-9b65-70328a4b7efa/summary.xml?api_key=876nvvkv2s96b9ujt5596mc2";
+//        try {
+//            String output = new HttpRequestHandler().execute(footer).get();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        } catch (ExecutionException e) {
+//            e.printStackTrace();
+//        }
 
     }
 }

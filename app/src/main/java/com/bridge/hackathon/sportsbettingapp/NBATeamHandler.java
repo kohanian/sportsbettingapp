@@ -19,6 +19,7 @@ public class NBATeamHandler {
     String alias;
 
     public NBATeamHandler(String json) {
+        System.out.println("JSON STRINGGGGGGGGGG::: " + json);
         JsonParser parser = new JsonParser();
         JsonObject league = parser.parse(json).getAsJsonObject();
         JsonObject team = league.getAsJsonObject("team");
@@ -45,7 +46,7 @@ public class NBATeamHandler {
         String firstName = jsonObject.get("first_name").getAsString();
         String lastName = jsonObject.get("last_name").getAsString();
         String id = jsonObject.get("id").getAsString();
-        String jerseyNumber = jsonObject.get("jersey_number").getAsString();
-        return new NBAPlayer(primaryPosition,firstName,lastName,id,jerseyNumber);
+//        String jerseyNumber = jsonObject.get("jersey_number").getAsString();
+        return new NBAPlayer(primaryPosition,firstName,lastName,id,"1");
     }
 }

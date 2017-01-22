@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class BetActivity extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class BetActivity extends AppCompatActivity {
 
 
         // button to next page (ChoosePlayersActivity)
-        Button btnToNext = (Button) findViewById(R.id.button5);
+        Button btnToNext = (Button) findViewById(R.id.button5_id);
 
         btnToNext.setOnClickListener(new View.OnClickListener() {
 
@@ -25,6 +26,26 @@ public class BetActivity extends AppCompatActivity {
                 startActivity(intent);
             }
 
+        });
+
+        final Button button4 = (Button) findViewById(R.id.button4_id);
+        final Button button3 = (Button) findViewById(R.id.button3_id);
+        final Button button2 = (Button) findViewById(R.id.button2_id);
+        final EditText editText = (EditText)findViewById(R.id.editText);
+        button4.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                editText.setText("$20.00");
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                editText.setText("$10.00");
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                editText.setText("$1.00");
+            }
         });
     }
 }

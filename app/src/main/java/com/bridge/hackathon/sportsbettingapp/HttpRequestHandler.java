@@ -83,6 +83,7 @@ public class HttpRequestHandler extends AsyncTask<String, Void, String> {
             this.exception = je;
             return null;
         }
+        connection.disconnect();
         return jsonPrettyPrintString;
     }
 

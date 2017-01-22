@@ -31,7 +31,7 @@ public class NBASchedulingHandler {
     public ArrayList<NBAGame> createNBAGamesList() {
         ArrayList<NBAGame> nbaGames = new ArrayList<>();
         for(int i = 0; i < listOfGames.size(); i++) {
-            JsonObject object = (JsonObject)listOfGames.get(0);
+            JsonObject object = (JsonObject)listOfGames.get(i);
             NBAGame nbaGame = getNBAGame(object);
             nbaGames.add(nbaGame);
         }
