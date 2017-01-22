@@ -40,22 +40,48 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
 
-            <Button
+            <TextView
                 android:text="Rules"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button_Rule"
+                android:id="@+id/textView15"
                 android:layout_weight="1"
-                android:textSize="20sp"
-                android:background="#77DD77"
-                />
+                android:textSize="30sp"
+                android:textStyle="normal|bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10">
+
+            <TextView
+                android:text="Points : 1 points Rebound : 3 points Assist : 2 points"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView12_rules"
+                android:layout_weight="0.07"
+                android:layout_width="wrap_content"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal">
 
             <Button
                 android:text="Bet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button_Bet"
-                android:layout_marginLeft="40sp"
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:background="#FFBB"

@@ -42,7 +42,8 @@
                         android:id="@+id/textView_Start"
                         android:fontFamily="sans-serif"
                         android:textColor="@android:color/background_dark"
-                        android:textSize="40sp" />
+                        android:textSize="40sp"
+                        android:paddingBottom="10dp" />
 
                     <LinearLayout
                         android:orientation="horizontal"
@@ -51,24 +52,14 @@
                         android:background="#DDDDDD"
                         android:backgroundTint="@android:color/background_dark">
 
-                        <ImageButton
+                        <Button
+                            android:text="Bet!!!!!"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/plus"
-                            android:id="@+id/imageButton_create"
-                            android:background="@android:color/holo_blue_dark"
+                            android:id="@+id/button9"
                             android:layout_weight="1"
-                            android:paddingTop="20dp" />
+                            android:textSize="30sp" />
 
-                        <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/enter"
-                            android:id="@+id/imageButton_join"
-                            android:background="@android:color/holo_blue_dark"
-                            android:minHeight="0dp"
-                            android:layout_weight="1"
-                            android:paddingTop="20dp" />
                     </LinearLayout>
 
                     <LinearLayout

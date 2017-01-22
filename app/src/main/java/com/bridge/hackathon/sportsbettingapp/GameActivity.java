@@ -3,7 +3,6 @@ package com.bridge.hackathon.sportsbettingapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatImageButton;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -28,7 +27,7 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         // button to next page (create game)
-        AppCompatImageButton btnToCreateGame = (AppCompatImageButton) findViewById(R.id.imageButton_create);
+        Button btnToCreateGame = (Button) findViewById(R.id.imageButton_create);
 
         btnToCreateGame.setOnClickListener(new View.OnClickListener() {
 

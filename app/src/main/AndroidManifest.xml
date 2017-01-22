@@ -53,11 +53,11 @@
         </activity>
         <activity android:name=".CreateActivity" />
         <activity android:name=".JoinActivity" />
-        <activity android:name=".BuildTeamActivity" />
         <activity android:name=".BetActivity" />
         <activity android:name=".RuleActivity" />
         <activity android:name=".LiveGameRoomActivity" />
-        <activity android:name=".PointsTableCalculateActivity"></activity>
+        <activity android:name=".PointsTableCalculateActivity" />
+        <activity android:name=".ChoosePlayersActivity"></activity>
     </application>
 
 </manifest>
