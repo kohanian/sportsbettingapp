@@ -6,22 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class BetActivity extends AppCompatActivity {
+public class ChoosePlayersActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bet);
+        setContentView(R.layout.activity_choose_players);
 
-
-        // button to next page (ChoosePlayersActivity)
-        Button btnToNext = (Button) findViewById(R.id.button5);
+        // button to next page (LiveGameRoom)
+        Button btnToNext = (Button) findViewById(R.id.button8);
 
         btnToNext.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(getApplicationContext(),ChoosePlayersActivity.class);
+                Intent intent = new Intent(getApplicationContext(),LiveGameRoomActivity.class);
                 startActivity(intent);
             }
 

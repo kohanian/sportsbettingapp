@@ -25,6 +25,18 @@ public class LiveGameRoomActivity extends AppCompatActivity {
             }
 
         });
+
+        Button btnToNext1 = (Button) findViewById(R.id.button2);
+
+        btnToNext1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                Intent intent1 = new Intent(getApplicationContext(),PointsTableCalculateActivity.class);
+                startActivity(intent1);
+            }
+
+        });
     }
 
 

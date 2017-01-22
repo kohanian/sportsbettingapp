@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Choose your team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textAlignment="center" />
+
+    <TextView
+        android:text="Point Guard"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textAlignment="center" />
+
+    <ListView android:layout_height="40dp"
+        android:layout_width="280dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Shooting Guard"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textAlignment="center" />
+
+    <ListView
+        android:layout_width="280dp"
+        android:layout_height="46dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Small Forward"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:textAlignment="center" />
+
+    <ListView
+        android:layout_width="240dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:text="Power Forward"
+        android:layout_width="207dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13"
+        android:textAlignment="center" />
+
+    <ListView
+        android:layout_width="240dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:text="Center"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView14"
+        android:textAlignment="center" />
+
+    <ListView
+        android:layout_width="240dp"
+        android:layout_height="40dp" />
+
+</LinearLayout>

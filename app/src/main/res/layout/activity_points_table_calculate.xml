@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_points_table_calculate"
     android:layout_width="match_parent"
@@ -8,6 +8,652 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.bridge.hackathon.sportsbettingapp.PointsTableCalculateActivity">
+    tools:context="com.bridge.hackathon.sportsbettingapp.PointsTableCalculateActivity"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <TextView
+        android:text="Live Pointsboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="23dp"
+        android:paddingTop="30dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="My Team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="normal|bold" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Worth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Worth_Label"
+                    android:layout_weight="2"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:text="Point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Points_Per_Basket_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Rebound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Points_Per_Rebound_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Points_Per_Assists_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Total:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Total_V"
+                    android:layout_weight="2" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Player1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Player1_Label"
+                    android:elevation="1dp"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P1_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player1_Baskets_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P1_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player1_Rebounds_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P1_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player1_Assists_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P1_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player1_Total_Label"
+                    android:layout_weight="2"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <TextView
+                    android:text="Player2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Player2_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P2_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player2_Basket_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P2-R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player2_Rebound_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P2_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player2_Assist_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P2_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player2_Total_Label"
+                    android:layout_weight="2"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <TextView
+                    android:text="Player3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Player3_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P3_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player3_Basket_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P3_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player3_Rebounds_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P3_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player3_Assist_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P3_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player3_Total_Label"
+                    android:layout_weight="2"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Player4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Player4_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P4_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player4_Basket_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P4_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player4_Rebounds_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P4_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player4_Assists_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P4_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player4_Total_Label"
+                    android:layout_weight="2" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Player5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Player5_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P5_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player5_Basket_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P5_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player5_Rebounds_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P5_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player5_Assists_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P5_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player5_Total_Label"
+                    android:layout_weight="2" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Total_H"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Total_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Total_Basket_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Total_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Total_Rebounds_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Total_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Total_Assists_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="T_P"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/M_Total_Points_Label"
+                    android:layout_weight="2" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="23dp"
+        android:paddingTop="50dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Opponent Team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="normal|bold" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Worth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Worth_Label"
+                    android:layout_weight="2"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:text="Point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Points_Per_Basket_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Rebound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Points_Per_Rebound_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Points_Per_Assists_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Total:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Total_V"
+                    android:layout_weight="2" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Player1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Player1_Label"
+                    android:elevation="1dp"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P1_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Player1_Baskets_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P1_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player1_Rebounds_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P1_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player1_Assists_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P1_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player1_Total_Label"
+                    android:layout_weight="2"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+                <TextView
+                    android:text="Player2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Player2_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P2_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player2_Basket_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P2-R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player2_Rebound_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P2_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player2_Assist_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P2_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player2_Total_Label"
+                    android:layout_weight="2"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:text="Player3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Player3_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P3_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player3_Basket_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P3_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player3_Rebounds_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P3_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player3_Assist_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P3_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player3_Total_Label"
+                    android:layout_weight="2"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Player4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Player4_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P4_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player4_Basket_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P4_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player4_Rebounds_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P4_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player4_Assists_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P4_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player4_Total_Label"
+                    android:layout_weight="2" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Player5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Player5_Label"
+                    android:layout_weight="2"/>
+
+                <TextView
+                    android:text="P5_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player5_Basket_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P5_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player5_Rebounds_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P5_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player5_Assists_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="P5_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Player5_Total_Label"
+                    android:layout_weight="2" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Total_H"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Total_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Total_Basket_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Total_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Total_Rebounds_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="Total_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Total_Assists_Label"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:text="T_P"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/O_Total_Points_Label"
+                    android:layout_weight="2" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
