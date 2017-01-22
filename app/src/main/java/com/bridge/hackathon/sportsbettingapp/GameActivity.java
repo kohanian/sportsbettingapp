@@ -1,9 +1,11 @@
 package com.bridge.hackathon.sportsbettingapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -23,6 +25,19 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        // button to next page (create game)
+        Button btnToCreateGame = (Button) findViewById(R.id.imageButton_create);
+
+        btnToCreateGame.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(getApplicationContext(),PointsTableCalculateActivity.class);
+                startActivity(intent);
+            }
+
+        });
 
         lvGame = (ListView)findViewById(R.id.listview_game);
         mGameList = new ArrayList<>();
