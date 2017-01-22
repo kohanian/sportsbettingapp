@@ -10,4 +10,59 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.bridge.hackathon.sportsbettingapp.CreateActivity">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:text="Game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textView_Title"
+                android:textAlignment="center"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:text="Rules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_Rule"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:background="#77DD77"
+                />
+
+            <Button
+                android:text="Bet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_Bet"
+                android:layout_marginLeft="40sp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:background="#FFBB"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>

@@ -2,12 +2,10 @@ package com.bridge.hackathon.sportsbettingapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class GameActivity extends AppCompatActivity {
@@ -15,6 +13,7 @@ public class GameActivity extends AppCompatActivity {
     private ListView lvGame;
     private GameListAdapter adapter;
     private List<Game> mGameList;
+    static HashMap<String, ArrayList<String>> data = new HashMap<String, ArrayList<String>>();
 
 
     @Override
@@ -35,6 +34,7 @@ public class GameActivity extends AppCompatActivity {
         adapter = new GameListAdapter(getApplicationContext(), mGameList);
         lvGame.setAdapter(adapter);
 
+<<<<<<< Updated upstream
         lvGame.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
@@ -43,5 +43,19 @@ public class GameActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Toast",Toast.LENGTH_LONG);
             }
         });
+=======
+//        lvGame.setOnClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+//                //do sometihng
+//                //EX : display message with
+//                Toast.makeText(getApplicationContext(), "Clicked Game id =" + view.getTag(), Toast.LENGTH_SHORT).show();
+//            }
+//        }
+>>>>>>> Stashed changes
     }
 }
+
+
+// Reference Video : https://youtu.be/YMJSBHAZsso
+

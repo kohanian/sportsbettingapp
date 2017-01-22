@@ -47,6 +47,7 @@
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
+<<<<<<< Updated upstream
                         android:layout_height="51dp"
                         android:background="#DDDDDD"
                         android:backgroundTint="@android:color/background_dark">
@@ -93,6 +94,17 @@
                             android:textSize="20sp"
                             android:textColor="@android:color/background_dark" />
                     </LinearLayout>
+=======
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView_Join"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/background_dark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+>>>>>>> Stashed changes
 
                 </LinearLayout>
 
