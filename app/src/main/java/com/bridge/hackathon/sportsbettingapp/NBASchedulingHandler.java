@@ -47,8 +47,8 @@ public class NBASchedulingHandler {
         String homeName = homeTeam.get("name").getAsString();
 
         JsonObject awayTeam = jsonObject.getAsJsonObject("away");
-        String awayID = homeTeam.get("id").getAsString();
-        String awayName = homeTeam.get("name").getAsString();
+        String awayID = awayTeam.get("id").getAsString();
+        String awayName = awayTeam.get("name").getAsString();
 
 
         NBAGame nbaGame = new NBAGame(stringID,homeID,awayID,homeName,awayName);

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -70,6 +71,16 @@ public class GameActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), "Clicked Game id =" + view.getTag(), Toast.LENGTH_SHORT).show();
 //            }
 //        }
+
+        String footer = "/nba-t3/games/d470c0a2-c2fa-450e-9b65-70328a4b7efa/summary.xml?api_key=876nvvkv2s96b9ujt5596mc2";
+        try {
+            String output = new HttpRequestHandler().execute(footer).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
     }
 }
 

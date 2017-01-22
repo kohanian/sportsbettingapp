@@ -87,7 +87,7 @@ public class HttpRequestHandler extends AsyncTask<String, Void, String> {
     }
 
 
-    String footer = "/nba-t3/teams/583eca2f-fb46-11e1-82cb-f4ce4684ea4c/profile.xml?api_key=876nvvkv2s96b9ujt5596mc2";
+//    String footer = "/nba-t3/teams/583eca2f-fb46-11e1-82cb-f4ce4684ea4c/profile.xml?api_key=876nvvkv2s96b9ujt5596mc2";
 
 //    try {
 //        String output = new HttpRequestHandler().execute(footer).get();
