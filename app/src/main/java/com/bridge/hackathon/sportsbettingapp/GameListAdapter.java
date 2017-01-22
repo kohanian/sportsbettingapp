@@ -61,6 +61,6 @@ public class GameListAdapter extends BaseAdapter {
 
 
 
-        return null;
+        return v;
     }
 }

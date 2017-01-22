@@ -7,178 +7,183 @@
     android:layout_height="match_parent"
     tools:context="com.bridge.hackathon.sportsbettingapp.GameActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/topSection"
-            android:layout_weight="0.01">
+            android:weightSum="1">
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="171dp"
-                android:background="#29A9D2"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="20dp">
-
-                <TextView
-                    android:text="Start"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView_Start"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@android:color/background_dark"
-                    android:textSize="40sp" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="51dp"
-                    android:background="#DDDDDD"
-                    android:backgroundTint="@android:color/background_dark">
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/plus"
-                        android:id="@+id/imageButton_create"
-                        android:background="@android:color/background_dark"
-                        android:layout_weight="1"
-                        android:paddingTop="20dp" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/enter"
-                        android:id="@+id/imageButton_join"
-                        android:background="@android:color/background_dark"
-                        android:minHeight="0dp"
-                        android:layout_weight="1"
-                        android:paddingTop="20dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp">
-
-                    <TextView
-                        android:text="Create a game"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/textView_Create"
-                        android:layout_weight="1"
-                        android:textColor="@android:color/background_dark" />
-
-                    <TextView
-                        android:text="Join a game"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/textView_Join"
-                        android:layout_weight="1"
-                        android:textSize="20sp"
-                        android:textColor="@android:color/background_dark" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/bottomSection">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp">
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/topSection"
+                android:layout_weight="0.01">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/list"
-                    android:id="@+id/imageView_List"
-                    android:layout_weight="1" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="171dp"
+                    android:background="#29A9D2"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp">
 
-                <TextView
-                    android:text="Game List"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView_GameList"
-                    android:layout_weight="1"
-                    android:textSize="30sp"
-                    android:textColor="#000000" />
+                    <TextView
+                        android:text="Start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_Start"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="40sp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:background="#DDDDDD"
+                        android:backgroundTint="@android:color/background_dark">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/plus"
+                            android:id="@+id/imageButton_create"
+                            android:background="@android:color/background_dark"
+                            android:layout_weight="1"
+                            android:paddingTop="20dp" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/enter"
+                            android:id="@+id/imageButton_join"
+                            android:background="@android:color/background_dark"
+                            android:minHeight="0dp"
+                            android:layout_weight="1"
+                            android:paddingTop="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            android:text="Create a game"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_Create"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/background_dark" />
+
+                        <TextView
+                            android:text="Join a game"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView_Join"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/background_dark" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:text="Day -2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button_DayNeg2"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:text="Day -1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button_DayNeg1"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button_Day0"
-                    android:layout_weight="1"
-                    android:text="Day 0" />
-
-                <Button
-                    android:text="Day +1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button_DayPos1"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:text="Day +2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button_DayPos2"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <ListView
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/listview_game"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:dividerHeight="10dp"
-                android:divider="#d1d1d1" ></ListView>
+                android:id="@+id/bottomSection">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/list"
+                        android:id="@+id/imageView_List"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="Game List"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView_GameList"
+                        android:layout_weight="1"
+                        android:textSize="30sp"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:text="Day -2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button_DayNeg2"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:text="Day -1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button_DayNeg1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button_Day0"
+                        android:layout_weight="1"
+                        android:text="Day 0" />
+
+                    <Button
+                        android:text="Day +1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button_DayPos1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:text="Day +2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button_DayPos2"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="231dp"
+                    android:id="@+id/listview_game"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:dividerHeight="10dp"
+                    android:divider="#d1d1d1" ></ListView>
+
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

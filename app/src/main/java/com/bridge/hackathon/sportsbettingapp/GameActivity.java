@@ -27,9 +27,9 @@ public class GameActivity extends AppCompatActivity {
 
         //Add Sample data for list
         //We can get data from DB, AppService here
-        mGameList.add(new Game(1, "Bobby", "Eric", 100));
-        mGameList.add(new Game(2, "Eric", "Kyle", 50));
-        mGameList.add(new Game(3, "Kyle", "Bobby", 20));
+        mGameList.add(new Game("1", "Bobby", "Eric", "100","Test"));
+        mGameList.add(new Game("2", "Eric", "Kyle", "50","Test"));
+        mGameList.add(new Game("3", "Kyle", "Bobby", "20","Test"));
 
         // Init Adapter
         adapter = new GameListAdapter(getApplicationContext(), mGameList);

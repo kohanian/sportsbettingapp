@@ -5,41 +5,44 @@ package com.bridge.hackathon.sportsbettingapp;
  */
 
 public class Game {
-    private int id;
+    private String id;
     //profile image from faceobok
     private String player1;
     private String player2;
-    private int amount;
+    private String amount;
 
     private String teamName1;
     private String teamName2;
 
+    private String date;
+
     //private int record;
 
     //constructor
-    public Game(int id, String player1, String player2, int amount){
+    public Game(String id, String player1, String player2, String amount, String date){
         this.id = id;
         this.player1 = player1;
         this.player2 = player2;
         this.amount = amount;
+        this.date = date;
     }
 
     // Setter and getter
 
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public int getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 
