@@ -21,14 +21,25 @@ public class GameActivity extends AppCompatActivity {
     private List<Game> mGameList;
     static HashMap<String, ArrayList<String>> data = new HashMap<String, ArrayList<String>>();
 
+    String userEmail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        Intent currentIntent = getIntent();
+        userEmail = currentIntent.getStringExtra("currentUserEmail");
+
+        MongoUserHelper userHelper = new MongoUserHelper();
+        if(!userHelper.exists(userEmail)) {
+            userHelper.insertUser(userEmail);
+            Toast.makeText(getApplicationContext(),"Created User",Toast.LENGTH_SHORT);
+        }
+
         // button to next page (create game)
-        Button btnToCreateGame = (Button) findViewById(R.id.imageButton_create);
+        Button btnToCreateGame = (Button) findViewById(R.id.button9);
 
         btnToCreateGame.setOnClickListener(new View.OnClickListener() {
 
