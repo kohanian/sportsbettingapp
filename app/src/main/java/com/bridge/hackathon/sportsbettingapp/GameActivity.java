@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,11 +34,11 @@ public class GameActivity extends AppCompatActivity {
         Intent currentIntent = getIntent();
         userEmail = currentIntent.getStringExtra("currentUserEmail");
 
-        MongoUserHelper userHelper = new MongoUserHelper();
-        if(!userHelper.exists(userEmail)) {
-            userHelper.insertUser(userEmail);
-            Toast.makeText(getApplicationContext(),"Created User",Toast.LENGTH_SHORT);
-        }
+
+        FirebaseUser firebaseUser = new FirebaseUser(userEmail);
+
+        FirebaseGame firebaseGame = new FirebaseGame("1","2","10");
+
 
         // button to next page (create game)
         Button btnToCreateGame = (Button) findViewById(R.id.button9);

@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 
 public class ChoosePlayersActivity extends AppCompatActivity {
+
+    Spinner point, shoot, small, power, center;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +28,11 @@ public class ChoosePlayersActivity extends AppCompatActivity {
             }
 
         });
+
+        point = (Spinner)findViewById(R.id.spinner);
+        shoot = (Spinner)findViewById(R.id.spinner2);
+        small = (Spinner)findViewById(R.id.spinner3);
+        power = (Spinner)findViewById(R.id.spinner4);
+        center = (Spinner)findViewById(R.id.spinner5);
     }
 }

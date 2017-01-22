@@ -36,8 +36,10 @@
             android:textSize="20sp"
             android:textStyle="normal|bold" />
 
-        <ListView android:layout_height="38dp"
-            android:layout_width="wrap_content"
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -58,10 +60,12 @@
             android:layout_width="210dp"
             android:paddingTop="10dp" />
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -80,10 +84,12 @@
             android:layout_width="210dp"
             android:paddingTop="10dp" />
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner3"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -102,10 +108,12 @@
             android:layout_width="210dp"
             android:paddingTop="10dp" />
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner4"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -125,9 +133,10 @@
             android:layout_width="210dp"
             android:paddingTop="10dp" />
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner5"
             android:layout_weight="1" />
 
     </LinearLayout>

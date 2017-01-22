@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "411956253308",
+    "firebase_url": "https://sportsbetting-14c48.firebaseio.com",
+    "project_id": "sportsbetting-14c48",
+    "storage_bucket": "sportsbetting-14c48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411956253308:android:63cf47c81e607f92",
+        "android_client_info": {
+          "package_name": "com.bridge.hackathon.sportsbettingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411956253308-opemijnbe9u9fsm8lo60f63n7bp83ahb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMXyZ4iGYO5b6iCqBe_Jyzc9fQg9zDxJI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
