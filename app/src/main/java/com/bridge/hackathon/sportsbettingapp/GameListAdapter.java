@@ -58,12 +58,6 @@ public class GameListAdapter extends BaseAdapter {
         // set game id to tag
         v.setTag(mGameList.get(position).getId());
 
-<<<<<<< Updated upstream
-
-
-
-=======
->>>>>>> Stashed changes
         return v;
     }
 }
