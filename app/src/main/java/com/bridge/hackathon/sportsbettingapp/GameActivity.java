@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -73,6 +74,26 @@ public class GameActivity extends AppCompatActivity {
                 //do sometihng
                 //EX : display message with
                 Toast.makeText(getApplicationContext(),"Toast",Toast.LENGTH_LONG);
+            }
+        });
+
+        final Button button4 = (Button) findViewById(R.id.button4_id);
+        final Button button3 = (Button) findViewById(R.id.button3_id);
+        final Button button2 = (Button) findViewById(R.id.button2_id);
+        final EditText editText = (EditText)findViewById(R.id.editText);
+        button4.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                editText.setText("$20.00");
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                editText.setText("$10.00");
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                editText.setText("$1.00");
             }
         });
 //        lvGame.setOnClickListener(new AdapterView.OnItemClickListener() {
